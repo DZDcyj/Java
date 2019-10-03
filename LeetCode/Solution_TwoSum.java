@@ -1,5 +1,4 @@
 public class Solution_TwoSum {
-    //TODO: can simplify this funciton?
     public static int[] twoSum(int[] nums, int target) {
         int[] results = new int[2];
         int indexOfX = 0, indexOfY = 0;
