@@ -1,5 +1,5 @@
 public class Solution_RemoveElement {
-    public static int removeElement(int[] nums, int val) {
+    private static int removeElement(int[] nums, int val) {
         if (nums.length == 0)
             return 0;
         int length = 0;

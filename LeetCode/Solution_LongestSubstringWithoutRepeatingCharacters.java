@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution_LongestSubstringWithoutRepeatingCharacters {
-    public static int lengthOfLongestSubstring(String s) {
+    private static int lengthOfLongestSubstring(String s) {
         int result = 0;
         List<Character> list = new ArrayList<>();
         for (char c : s.toCharArray()) {

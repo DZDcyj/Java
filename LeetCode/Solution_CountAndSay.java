@@ -1,5 +1,5 @@
 public class Solution_CountAndSay {
-    public static String countAndSay(int n) {
+    private static String countAndSay(int n) {
         String result = "1";
         for (int i = 1; i < n; i++) {
             result = Solution_CountAndSay.getNewString(result);
@@ -8,27 +8,24 @@ public class Solution_CountAndSay {
     }
 
     private static String getNewString(String prev) {
-        // TODO
         if (prev.length() == 0)
             return "";
         else if (prev.length() == 1)
             return "1" + prev;
-        String result = "";
+        StringBuilder result = new StringBuilder();
+        int index = 0;
+        int start = 0;
         char curr = prev.charAt(0);
-        int num = 1;
-        int index = 1;
         while (index < prev.length()) {
-            if (prev.charAt(index) == curr) {
-                num++;
-            } else {
-                result = "" + num + curr;
-                num = 1;
+            if (prev.charAt(index) != curr) {
+                result.append(index - start).append(curr);
                 curr = prev.charAt(index);
+                start = index;
             }
             index++;
         }
-        result = "" + num + curr;
-        return result;
+        result.append(index - start).append(curr);
+        return result.toString();
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,5 @@
 public class Solution_PalindromeNumber {
-    public static boolean isPalindrome(int x) {
+    private static boolean isPalindrome(int x) {
         String num = String.valueOf(x);
         String numReversed = new StringBuilder(num).reverse().toString();
         if (num.equals(numReversed)) {

@@ -1,5 +1,5 @@
 public class Solution_Implement_strStr {
-    public static int strStr(String haystack, String needle) {
+    private static int strStr(String haystack, String needle) {
         if (needle.equals(""))
             return 0;
         if (haystack.length() < needle.length())

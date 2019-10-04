@@ -1,5 +1,5 @@
 public class Solution_RemoveDuplicatesFromSortedArray {
-    public static int removeDuplicates(int[] nums) {
+    private static int removeDuplicates(int[] nums) {
         if (nums.length == 0)
             return 0;
         int max = nums[0];

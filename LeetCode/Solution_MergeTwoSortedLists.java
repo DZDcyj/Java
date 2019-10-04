@@ -27,7 +27,7 @@ public class Solution_MergeTwoSortedLists {
 
     }
 
-    public void quickSort(ListNode begin, ListNode end) {
+    private void quickSort(ListNode begin, ListNode end) {
         if (begin == null || end == null || begin == end)
             return;
         ListNode first = begin;

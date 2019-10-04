@@ -1,5 +1,5 @@
 public class Solution_LongestCommonPrefix {
-    public static String longestCommonPrefix(String[] strs) {
+    private static String longestCommonPrefix(String[] strs) {
         String result = "";
         if (strs.length == 1)
             return strs[0];

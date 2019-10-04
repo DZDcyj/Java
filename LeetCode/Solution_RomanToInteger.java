@@ -1,6 +1,6 @@
 
 public class Solution_RomanToInteger {
-    public static int romanToInt(String s) {
+    private static int romanToInt(String s) {
         char[] c = s.toCharArray();
         int length = c.length;
         int sum = 0;

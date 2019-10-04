@@ -1,5 +1,5 @@
 public class Solution_ReverseInteger {
-    public static int reverse(int x) {
+    private static int reverse(int x) {
         long result = 0;
         int temp = x;
         int flag = -1;

@@ -1,7 +1,4 @@
-import org.jetbrains.annotations.Contract;
-
 public class Solution_InsertPosition {
-    @Contract(pure = true)
     private static int searchInsert(int[] nums, int target) {
         // TODO: find O(logN) ways
         for (int i = 0; i < nums.length; i++) {

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution_3Sum {
-    public static List<List<Integer>> threeSum(int[] nums) {
+    private static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         // TODO:complete the function
         return result;
