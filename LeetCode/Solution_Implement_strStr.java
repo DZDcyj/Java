@@ -13,6 +13,7 @@ public class Solution_Implement_strStr {
                 while (index < needle.length()) {
                     if (haystack.charAt(i + index) != needle.charAt(index)) {
                         complete = false;
+                        break;
                     }
                     index++;
                 }
