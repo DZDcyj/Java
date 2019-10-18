@@ -1,6 +1,9 @@
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 public class Solution_RomanToInteger {
-    private static int romanToInt(String s) {
+    @Contract(pure = true)
+    private static int romanToInt(@NotNull String s) {
         char[] c = s.toCharArray();
         int length = c.length;
         int sum = 0;

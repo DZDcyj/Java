@@ -1,5 +1,7 @@
+import org.jetbrains.annotations.NotNull;
+
 public class Solution_RemoveElement {
-    private static int removeElement(int[] nums, int val) {
+    private static int removeElement(@NotNull int[] nums, int val) {
         if (nums.length == 0)
             return 0;
         int length = 0;

@@ -1,8 +1,16 @@
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Stack;
 
 public class Solution_ValidParentheses {
-    private static boolean isValid(String s) {
+
+    @Contract("null -> true")
+    private static boolean isValid(@Nullable String s) {
         Stack<Character> stack = new Stack<>();
+        if (s == null)
+            return true;
         char[] c = s.toCharArray();
         for (char i : c) {
             if (i == '(' || i == '[' || i == '{')
@@ -20,6 +28,7 @@ public class Solution_ValidParentheses {
         }
         return stack.isEmpty();
     }
+
 
     public static void main(String[] args) {
         String test1 = "()";

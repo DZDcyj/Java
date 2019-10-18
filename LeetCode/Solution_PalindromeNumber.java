@@ -11,8 +11,8 @@ public class Solution_PalindromeNumber {
     }
 
     public static void main(String[] args) {
-        isPalindrome(121);
-        isPalindrome(-121);
-        isPalindrome(10);
+        System.out.println(isPalindrome(121));
+        System.out.println(isPalindrome(-121));
+        System.out.println(isPalindrome(10));
     }
 }

@@ -3,11 +3,11 @@ public class Solution_ReverseInteger {
         long result = 0;
         int temp = x;
         int flag = -1;
-        while ((temp | 0) != 0) {
+        while ((temp) != 0) {
             temp /= 10;
             flag += 1;
         }
-        while ((x | 0) != 0) {
+        while ((x) != 0) {
             result += ((x % 10) * (long) (Math.pow(10, flag)));
             if (result > 2147483647 || result < -2147483648)
                 return 0;
