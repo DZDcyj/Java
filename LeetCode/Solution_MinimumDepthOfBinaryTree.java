@@ -13,7 +13,6 @@ public class Solution_MinimumDepthOfBinaryTree {
     }
 
     private static int minDepth(TreeNode root) {
-        // TODO
         if (root == null)
             return 0;
         if (root.left == null && root.right == null)

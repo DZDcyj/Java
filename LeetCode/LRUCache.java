@@ -89,6 +89,7 @@ public class LRUCache {
         System.out.println(test3.get(2));       // should be 3
         System.out.println();
 */
+        // TODO: fix the bug
         LRUCache lruCache = new LRUCache(10);
         lruCache.put(10, 13);
         lruCache.put(3, 17);

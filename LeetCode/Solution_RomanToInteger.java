@@ -65,5 +65,6 @@ public class Solution_RomanToInteger {
         System.out.println(romanToInt("IX"));
         System.out.println(romanToInt("LVIII"));
         System.out.println(romanToInt("MCMXCIV"));
+        System.out.println(romanToInt("XIX"));
     }
 }
