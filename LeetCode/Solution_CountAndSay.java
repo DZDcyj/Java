@@ -29,7 +29,7 @@ public class Solution_CountAndSay {
     }
 
     public static void main(String[] args) {
-        System.out.println(countAndSay(1));
-        System.out.println(countAndSay(4));
+        for (int i = 1; i <= 10; i++)
+            System.out.println(countAndSay(i));
     }
 }

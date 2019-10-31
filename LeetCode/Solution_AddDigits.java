@@ -6,8 +6,7 @@ public class Solution_AddDigits {
      * @date 2019/10/29
      * How does this function work?
      * Why does this function work properly?
-     *
-     * */
+     */
 
     @Contract(pure = true)
     private static int addDigits(int num) {
@@ -16,5 +15,6 @@ public class Solution_AddDigits {
 
     public static void main(String[] args) {
         System.out.println(addDigits(38));
+        System.out.println(addDigits(1345));
     }
 }

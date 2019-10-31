@@ -1,3 +1,4 @@
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ public class Solution_BinaryTreeLevelOrderTraversalTwo {
         TreeNode left;
         TreeNode right;
 
+        @Contract(pure = true)
         TreeNode(int x) {
             val = x;
         }
@@ -37,6 +39,7 @@ public class Solution_BinaryTreeLevelOrderTraversalTwo {
      * }
      * }
      */
+    @NotNull
     private static List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         putIn(root, 0, result);
