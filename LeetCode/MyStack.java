@@ -3,7 +3,7 @@ import java.util.Queue;
 
 // structure Stack Based on Queue
 public class MyStack {
-    private Queue<Integer> stack;
+    private Queue<Integer> storage;
     private Queue<Integer> queue;
     private int size;
 
@@ -11,7 +11,7 @@ public class MyStack {
      * Initialize your data structure here.
      */
     public MyStack() {
-        stack = new LinkedList<>();
+        storage = new LinkedList<>();
         queue = new LinkedList<>();
         size = 0;
     }
@@ -20,21 +20,30 @@ public class MyStack {
      * Push element x onto stack.
      */
     public void push(int x) {
-
+        size++;
+        queue.offer(x);
+        while (queue.size() > 1)
+            storage.offer(queue.poll());
     }
 
     /**
      * Removes the element on top of the stack and returns that element.
      */
     public int pop() {
-
+        int result = queue.poll();
+        while (!storage.isEmpty())
+            queue.offer(storage.poll());
+        while (queue.size() > 1)
+            storage.offer(queue.poll());
+        size--;
+        return result;
     }
 
     /**
      * Get the top element.
      */
     public int top() {
-
+        return queue.peek();
     }
 
     /**
