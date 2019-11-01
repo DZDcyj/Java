@@ -1,10 +1,13 @@
+import org.jetbrains.annotations.Contract;
+
 public class Solution_Sqrt {
+    @Contract(pure = true)
     private static int sqrt(int x) {
-        int left=1, right=x;
-        while(left < right){
+        int left = 1, right = x;
+        while (left < right) {
             int mid = (left + right + 1) >> 1;
-            if(mid <= x/mid) left = mid;
-            else right = mid-1;
+            if (mid <= x / mid) left = mid;
+            else right = mid - 1;
         }
         return right;
     }
