@@ -1,7 +1,5 @@
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Hashtable;
-
 public class Solution_RansomNote {
     private static boolean canConstruct(String ransomNote, @NotNull String magazine) {
         int[] letters = new int[26];
