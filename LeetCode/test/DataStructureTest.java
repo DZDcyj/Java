@@ -11,7 +11,8 @@ public class DataStructureTest {
         // testMyCircularDeque();
         // testMyLinkedList();
         // testCodec();
-        testTwitter();
+        // testTwitter();
+        testRecentCounter();
     }
 
     private static void testCodec() {
@@ -73,5 +74,16 @@ public class DataStructureTest {
         System.out.println(twitter.getNewsFeed(1));
         twitter.unfollow(1, 2);
         System.out.println(twitter.getNewsFeed(1));
+    }
+
+    private static void testRecentCounter() {
+        RecentCounter recentCounter = new RecentCounter();
+        System.out.println(recentCounter.ping(1));
+        System.out.println(recentCounter.ping(100));
+        System.out.println(recentCounter.ping(3001));
+        System.out.println(recentCounter.ping(3002));
+
+        RecentCounter recentCounter1 = new RecentCounter();
+        System.out.println(recentCounter.ping(642));
     }
 }
