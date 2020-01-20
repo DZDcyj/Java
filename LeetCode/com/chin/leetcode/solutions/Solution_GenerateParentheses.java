@@ -5,27 +5,27 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Solution_GenerateParentheses {
     private static List<String> generateParenthesis(int n) {
-        List<String> list = new CopyOnWriteArrayList<>();
-        if (n == 0)
-            return list;
-        list.add("()");
-        for (int i = 1; i < n; i++) {
-            for (String str : list) {
-                list.add("()" + str);
-                list.add("(" + str + ")");
-                list.add(str + "()");
-                list.remove(str);
-            }
-        }
-        HashSet<String> hashSet = new HashSet<>(list);
+        List<String> result = new ArrayList<>();
+        backtrack(result, "", 0, 0, n);
+        return result;
+    }
 
-        list.clear();
-        list.addAll(hashSet);
-        Collections.sort(list);
-        return list;
+    private static void backtrack(List<String> ans, String cur, int open, int close, int max) {
+        if (cur.length() == max * 2) {
+            ans.add(cur);
+            return;
+        }
+        if (open < max) {
+            backtrack(ans, cur + "(", open + 1, close, max);
+        }
+        if (close < open) {
+            backtrack(ans, cur + ")", open, close + 1, max);
+        }
     }
 
     public static void main(String[] args) {
+        System.out.println(generateParenthesis(1));
+        System.out.println(generateParenthesis(2));
         System.out.println(generateParenthesis(3));
         System.out.println(generateParenthesis(4));
     }
