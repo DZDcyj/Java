@@ -1,16 +1,11 @@
 package com.chin.leetcode.solutions;
 
+import com.chin.leetcode.TreeNode;
+
+/**
+ * @author Chin
+ */
 public class Solution_InvertBinaryTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     private static TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return null;

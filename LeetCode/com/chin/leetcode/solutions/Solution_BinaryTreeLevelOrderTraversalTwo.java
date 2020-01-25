@@ -1,5 +1,6 @@
 package com.chin.leetcode.solutions;
 
+import com.chin.leetcode.TreeNode;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
@@ -8,18 +9,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class Solution_BinaryTreeLevelOrderTraversalTwo {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        @Contract(pure = true)
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
-
     /**
      * 递归解决，递是发现问题，归是解决问题
      * class com.chin.leetcode.solutions.Solution {

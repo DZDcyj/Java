@@ -1,19 +1,10 @@
 package com.chin.leetcode.solutions;
 
+import com.chin.leetcode.TreeNode;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 public class Solution_SumOfLeftLeaves {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        @Contract(pure = true)
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     private static int sumOfLeftLeaves(TreeNode root) {
         if (root == null) {

@@ -1,21 +1,12 @@
 package com.chin.leetcode.solutions;
 
+import com.chin.leetcode.TreeNode;
 import org.jetbrains.annotations.Contract;
 
 /**
  * @author Chin
  */
 public class Solution_ValidateBinarySearchTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        @Contract(pure = true)
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     @Contract("null -> true")
     private static boolean isValidBST(TreeNode root) {

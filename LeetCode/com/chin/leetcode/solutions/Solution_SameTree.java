@@ -1,18 +1,9 @@
 package com.chin.leetcode.solutions;
 
+import com.chin.leetcode.TreeNode;
 import org.jetbrains.annotations.Contract;
 
 public class Solution_SameTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        @Contract(pure = true)
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     @Contract("null, !null -> false; !null, null -> false; null, null -> true")
     private static boolean isSameTree(TreeNode p, TreeNode q) {

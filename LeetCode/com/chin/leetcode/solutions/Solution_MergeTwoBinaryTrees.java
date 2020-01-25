@@ -1,13 +1,9 @@
-public class Solution_MergeTwoBinaryTrees {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+package com.chin.leetcode.solutions;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
+import com.chin.leetcode.TreeNode;
+
+public class Solution_MergeTwoBinaryTrees {
+
 
     private static TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if (t1 == null) {

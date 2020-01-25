@@ -1,20 +1,10 @@
 package com.chin.leetcode.solutions;
 
+import com.chin.leetcode.TreeNode;
 import org.jetbrains.annotations.Contract;
 
 public class Solution_SymmetricTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        @Contract(pure = true)
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
-    @Contract("null -> true")
     private static boolean isSymmetric(TreeNode root) {
         if (root == null)
             return true;

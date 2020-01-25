@@ -1,15 +1,8 @@
 package com.chin.leetcode.solutions;
 
-public class Solution_RangeSumOfBST {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+import com.chin.leetcode.TreeNode;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
+public class Solution_RangeSumOfBST {
 
     private static int rangeSumBst(TreeNode root, int L, int R) {
         if (root == null) {

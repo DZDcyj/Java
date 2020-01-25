@@ -1,18 +1,9 @@
 package com.chin.leetcode.solutions;
 
+import com.chin.leetcode.TreeNode;
 import org.jetbrains.annotations.Contract;
 
 public class Solution_PathSum {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        @Contract(pure = true)
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     @Contract("null, _ -> false")
     private static boolean hasPathSum(TreeNode root, int sum) {

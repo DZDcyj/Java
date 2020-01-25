@@ -1,18 +1,10 @@
 package com.chin.leetcode.solutions;
 
+import com.chin.leetcode.TreeNode;
 import org.jetbrains.annotations.Contract;
 
 public class Solution_SearchInABinarySearchTree {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        @Contract(pure = true)
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     @Contract("null, _ -> null")
     private static TreeNode searchBST(TreeNode root, int val) {
