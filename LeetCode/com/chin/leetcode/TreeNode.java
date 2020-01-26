@@ -1,5 +1,7 @@
 package com.chin.leetcode;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -20,24 +22,18 @@ public class TreeNode {
     /**
      * This function transform the array format like [1,2,null,3,4] to binary tree
      * The tree structure is below:(With the given array)
-     *        1
-     *       |
-     *       2
-     *      / \
-     *     3   4
+     * 1
+     * |
+     * 2
+     * / \
+     * 3   4
      *
      * @param array The given array
      * @return The root node of the binary tree
-     *
-     * */
+     */
 
+    @NotNull
     public static TreeNode constructFromArray(String array) {
-        if (array == null) {
-            return null;
-        }
-        if (array.length() <= ARRAY_MIN_LENGTH) {
-            return new TreeNode(-1);
-        }
         array = array.substring(1, array.length() - 1);
         String[] values = array.split(",");
         if (values.length <= 0) {
@@ -76,8 +72,7 @@ public class TreeNode {
 
     /**
      * This function is used to resolve the negative value temp nodes during constructing the binary tree
-     *
-     * */
+     */
 
     private void removeNegativeNodes() {
         TreeNode curr;
@@ -107,8 +102,7 @@ public class TreeNode {
      * We transform the TreeNode to String in preOrder format
      *
      * @return The preOrder of the binary tree, using "," to split. Covered with brace like "[" and "]"
-     * 
-     * */
+     */
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
@@ -135,7 +129,7 @@ public class TreeNode {
             }
         }
         stringBuilder.append("]");
-        for (int i = stringBuilder.length() - 2; i >= 0; i--) {
+        for (int i = stringBuilder.length() - ARRAY_MIN_LENGTH; i >= 0; i--) {
             if (Character.isDigit(stringBuilder.charAt(i))) {
                 return stringBuilder.substring(0, i + 1) + "]";
             }
