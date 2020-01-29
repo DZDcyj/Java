@@ -3,28 +3,24 @@ package com.chin.leetcode.solutions;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author Chin
  */
 public class TwoSum {
     @NotNull
     @Contract(pure = true)
-    public static int[] twoSum(int[] nums, int target) {
-        int[] results = new int[2];
-        int indexOfX = 0, indexOfY = 0;
-
-        outer:for (int x : nums) {
-            for (int y : nums) {
-                if (indexOfY != indexOfX && (x + y) == target) {
-                    break outer;
-                }
-                indexOfY++;
+    public static int[] twoSum(@NotNull int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>(16);
+        for (int i = 0; i < nums.length; i++) {
+            int currTarget = target - nums[i];
+            if (map.containsKey(currTarget)) {
+                return new int[]{map.get(currTarget), i};
             }
-            indexOfY = 0;
-            indexOfX++;
+            map.put(nums[i], i);
         }
-        results[0] = indexOfX;
-        results[1] = indexOfY;
-        return results;
+        return new int[2];
     }
 }

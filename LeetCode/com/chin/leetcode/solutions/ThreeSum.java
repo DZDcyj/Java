@@ -10,6 +10,8 @@ import java.util.List;
  * @author Chin
  */
 public class ThreeSum {
+    private static final int MIN_LENGTH = 3;
+
     /**
      * @author 灵魂画师牧码
      * @date 2019/10/9
@@ -23,8 +25,9 @@ public class ThreeSum {
     @NotNull
     private static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        if (nums == null || nums.length < 3)
+        if (nums == null || nums.length < MIN_LENGTH) {
             return result;
+        }
         Arrays.sort(nums);
         // Here we sort the array
         for (int i = 0; i < nums.length; i++) {
