@@ -34,8 +34,8 @@ public class RemoveDuplicatesFromSortedList {
     }
 
     public static void main(String[] args) {
-        ListNode test1 = ListNode.constructListNodeFromString("1->1->2");
-        ListNode test2 = ListNode.constructListNodeFromString("[1->1->2->3->3]");
+        ListNode test1 = ListNode.constructFromString("1->1->2");
+        ListNode test2 = ListNode.constructFromString("[1->1->2->3->3]");
         ListNode test3 = new ListNode(3);
         System.out.println(deleteDuplicates(test1).toString());
         System.out.println(deleteDuplicates(test2).toString());

@@ -9,6 +9,8 @@ import org.jetbrains.annotations.TestOnly;
  */
 public class ListNode {
 
+    private static final char SIGN = '-';
+
     public int val;
     public ListNode next;
 
@@ -16,10 +18,15 @@ public class ListNode {
         val = x;
     }
 
-    @NotNull
-    public static ListNode constructListNodeFromString(@NotNull String str) {
+    @Nullable
+    public static ListNode constructFromString(@NotNull String str) {
+        if ("".equals(str)) {
+            return null;
+        }
         if (!Character.isDigit(str.charAt(0))) {
-            str = str.substring(1);
+            if (str.charAt(0) != SIGN) {
+                str = str.substring(1);
+            }
         }
         if (!Character.isDigit(str.charAt(str.length() - 1))) {
             str = str.substring(0, str.length() - 1);
@@ -53,7 +60,7 @@ public class ListNode {
 
     @TestOnly
     public static void main(String[] args) {
-        ListNode listNode = constructListNodeFromString("1");
-        System.out.println(listNode.toString());
+        ListNode listNode = constructFromString("1");
+        System.out.println(listNode);
     }
 }

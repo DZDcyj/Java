@@ -9,7 +9,16 @@ import org.jetbrains.annotations.NotNull;
 public class PlayWithChips {
     @Contract(pure = true)
     private static int minCostToMoveChips(@NotNull int[] chips) {
-        
+        int odd = 0;
+        int even = 0;
+        for (int chip : chips) {
+            if ((chip & 1) == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+        }
+        return Math.min(odd, even);
     }
 
     public static void main(String[] args) {

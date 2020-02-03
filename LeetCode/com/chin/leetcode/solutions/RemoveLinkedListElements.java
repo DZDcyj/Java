@@ -22,7 +22,7 @@ public class RemoveLinkedListElements {
     }
 
     public static void main(String[] args) {
-        ListNode test = ListNode.constructListNodeFromString("1->2->3");
+        ListNode test = ListNode.constructFromString("1->2->3");
         System.out.println(removeElements(test, 1).toString());
         System.out.println(removeElements(test, 2).toString());
     }

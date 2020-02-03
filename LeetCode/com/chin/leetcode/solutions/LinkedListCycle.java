@@ -34,12 +34,12 @@ public class LinkedListCycle {
     }
 
     public static void main(String[] args) {
-        ListNode test1 = ListNode.constructListNodeFromString("[3->2->1->4]");
+        ListNode test1 = ListNode.constructFromString("[3->2->1->4]");
         test1.next.next.next.next = test1.next;
 
         System.out.println(hasCycle(test1));
 
-        ListNode test2 = ListNode.constructListNodeFromString("1->2");
+        ListNode test2 = ListNode.constructFromString("1->2");
         test2.next.next = test2.next;
 
         System.out.println(hasCycle(test2));

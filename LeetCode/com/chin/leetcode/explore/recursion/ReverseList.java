@@ -25,7 +25,7 @@ public class ReverseList {
 
 
     public static void main(String[] args) {
-        ListNode testCase = ListNode.constructListNodeFromString("1->5");
+        ListNode testCase = ListNode.constructFromString("1->5");
         System.out.println(testCase);
         System.out.println(reverseList(testCase));
     }

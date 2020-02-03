@@ -26,7 +26,7 @@ public class RemoveNthNodeFromEndOfList {
     }
 
     public static void main(String[] args) {
-        ListNode test = ListNode.constructListNodeFromString("1->2->3->4->5");
+        ListNode test = ListNode.constructFromString("1->2->3->4->5");
         System.out.println(removeNthFromEnd(test, 1));
         System.out.println(removeNthFromEnd(test, 2));
     }

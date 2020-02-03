@@ -25,7 +25,7 @@ public class SwapPairs {
 
 
     public static void main(String[] args) {
-        ListNode testCase = ListNode.constructListNodeFromString("1->2->3->4->5->6");
+        ListNode testCase = ListNode.constructFromString("1->2->3->4->5->6");
         System.out.println(testCase);
         System.out.println(swapPairs(testCase));
     }

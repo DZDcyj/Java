@@ -44,7 +44,7 @@ public class TreeNode {
         queue.offer(root);
         int index = 0;
         TreeNode curr;
-        while (index < values.length) {
+        while (!queue.isEmpty()) {
             curr = queue.poll();
             assert curr != null;
             if (!"null".equals(values[index])) {

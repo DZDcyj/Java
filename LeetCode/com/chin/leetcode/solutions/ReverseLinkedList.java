@@ -22,7 +22,7 @@ public class ReverseLinkedList {
     }
 
     public static void main(String[] args) {
-        ListNode test = ListNode.constructListNodeFromString("[1->2->3->4->5]");
+        ListNode test = ListNode.constructFromString("[1->2->3->4->5]");
         System.out.println(test);
         System.out.println(reverseList(test));
     }
