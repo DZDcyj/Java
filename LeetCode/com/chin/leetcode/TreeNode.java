@@ -83,7 +83,6 @@ public class TreeNode {
             if (curr.left != null) {
                 if (curr.left.val <= 0) {
                     curr.left = null;
-                    continue;
                 } else {
                     queue.offer(curr.left);
                 }
@@ -121,12 +120,11 @@ public class TreeNode {
             if (curr == null) {
                 stringBuilder.append("null");
                 continue;
+            } else {
+                stringBuilder.append(curr.val);
             }
-            stringBuilder.append(curr.val);
-            if (!(curr.left == null && curr.right == null)) {
-                queue.offer(curr.left);
-                queue.offer(curr.right);
-            }
+            queue.offer(curr.left);
+            queue.offer(curr.right);
         }
         stringBuilder.append("]");
         for (int i = stringBuilder.length() - ARRAY_MIN_LENGTH; i >= 0; i--) {
