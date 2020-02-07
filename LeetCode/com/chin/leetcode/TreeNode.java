@@ -102,12 +102,13 @@ public class TreeNode {
      *
      * @return The preOrder of the binary tree, using "," to split. Covered with brace like "[" and "]"
      */
-    @Override
-    public String toString() {
+
+    @NotNull
+    public static String toString(TreeNode root) {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("[");
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(this);
+        queue.offer(root);
         TreeNode curr;
         boolean first = true;
         while (!queue.isEmpty()) {
@@ -137,6 +138,6 @@ public class TreeNode {
 
     public static void main(String[] args) {
         TreeNode testCase = constructFromArray("[1,2,3,null,4,5,6]");
-        System.out.println(testCase.toString());
+        System.out.println(TreeNode.toString(testCase));
     }
 }

@@ -41,10 +41,9 @@ public class ListNode {
         return root;
     }
 
-    @Override
-    public String toString() {
+    public static String toString(ListNode node) {
         StringBuilder stringBuilder = new StringBuilder();
-        ListNode curr = this;
+        ListNode curr = node;
         boolean first = true;
         while (curr != null) {
             if (first) {
@@ -61,6 +60,6 @@ public class ListNode {
     @TestOnly
     public static void main(String[] args) {
         ListNode listNode = constructFromString("1");
-        System.out.println(listNode);
+        System.out.println(ListNode.toString(listNode));
     }
 }
