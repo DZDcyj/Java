@@ -1,19 +1,23 @@
 package test;
 
 import com.chin.leetcode.datastructures.*;
+import org.jetbrains.annotations.TestOnly;
 
 /**
  * @author Chin
  */
 public class DataStructureTest {
+    @TestOnly
     public static void main(String[] args) {
-        testWordDictionary();
+        // testWordDictionary();
         // testMyCircularDeque();
         // testMyLinkedList();
         // testCodec();
         // testTwitter();
         // testRecentCounter();
-        // testLRUCache();
+        // testLruCache();
+        // testTrie();
+        // testAllOne();
     }
 
     private static void testCodec() {
@@ -88,7 +92,7 @@ public class DataStructureTest {
         System.out.println(recentCounter.ping(642));
     }
 
-    private static void testLRUCache() {
+    private static void testLruCache() {
         LRUCache cache = new LRUCache(2);
         cache.put(1, 1);
         cache.put(2, 2);
@@ -100,4 +104,32 @@ public class DataStructureTest {
         System.out.println(cache.get(3));
         System.out.println(cache.get(4));
     }
+
+    private static void testTrie() {
+        Trie trie = new Trie();
+        trie.insert("apple");
+        System.out.println(trie.search("apple"));
+        System.out.println(trie.search("app"));
+        System.out.println(trie.startsWith("app"));
+        trie.insert("app");
+        System.out.println(trie.search("app"));
+    }
+
+    private static void testAllOne() {
+        AllOne allOne = new AllOne();
+        allOne.inc("a");
+        allOne.inc("b");
+        allOne.inc("b");
+        allOne.inc("c");
+        allOne.inc("c");
+        allOne.inc("c");
+        allOne.dec("b");
+        allOne.dec("b");
+        System.out.println(allOne.getMinKey());
+        allOne.dec("a");
+        System.out.println(allOne.getMaxKey());
+        System.out.println(allOne.getMinKey());
+    }
+
+
 }
