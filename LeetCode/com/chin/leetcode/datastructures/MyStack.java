@@ -3,7 +3,14 @@ package com.chin.leetcode.datastructures;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// structure Stack Based on Queue
+/**
+ * @author Chin
+ */
+
+/**
+ * Structure Stack Based on Queue
+ * @author Chin
+ */
 public class MyStack {
     private Queue<Integer> storage;
     private Queue<Integer> queue;
@@ -24,8 +31,9 @@ public class MyStack {
     public void push(int x) {
         size++;
         queue.offer(x);
-        while (queue.size() > 1)
+        while (queue.size() > 1) {
             storage.offer(queue.poll());
+        }
     }
 
     /**
@@ -33,10 +41,12 @@ public class MyStack {
      */
     public int pop() {
         int result = queue.poll();
-        while (!storage.isEmpty())
+        while (!storage.isEmpty()) {
             queue.offer(storage.poll());
-        while (queue.size() > 1)
+        }
+        while (queue.size() > 1) {
             storage.offer(queue.poll());
+        }
         size--;
         return result;
     }

@@ -20,6 +20,11 @@ public class ListNode {
 
     @Nullable
     public static ListNode constructFromString(@NotNull String str) {
+        return constructFromString(str, "->");
+    }
+
+    @Nullable
+    public static ListNode constructFromString(@NotNull String str, @NotNull String separator) {
         if ("".equals(str)) {
             return null;
         }
@@ -31,7 +36,7 @@ public class ListNode {
         if (!Character.isDigit(str.charAt(str.length() - 1))) {
             str = str.substring(0, str.length() - 1);
         }
-        String[] values = str.split("->");
+        String[] values = str.split(separator);
         ListNode root = new ListNode(Integer.parseInt(values[0]));
         ListNode curr = root;
         for (int i = 1; i < values.length; i++) {
@@ -41,6 +46,7 @@ public class ListNode {
         return root;
     }
 
+    @NotNull
     public static String toString(ListNode node) {
         StringBuilder stringBuilder = new StringBuilder();
         ListNode curr = node;

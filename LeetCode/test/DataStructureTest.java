@@ -3,6 +3,10 @@ package test;
 import com.chin.leetcode.datastructures.*;
 import org.jetbrains.annotations.TestOnly;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * @author Chin
  */
@@ -18,6 +22,8 @@ public class DataStructureTest {
         // testLruCache();
         // testTrie();
         // testAllOne();
+        // testPeekingIterator();
+        // testMedianFinder();
     }
 
     private static void testCodec() {
@@ -131,5 +137,25 @@ public class DataStructureTest {
         System.out.println(allOne.getMinKey());
     }
 
+    private static void testPeekingIterator() {
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        PeekingIterator peekingIterator = new PeekingIterator(list.iterator());
+        while (peekingIterator.hasNext()) {
+            System.out.println(peekingIterator.peek());
+            System.out.println(peekingIterator.next());
+        }
+    }
+
+    private static void testMedianFinder() {
+        MedianFinder medianFinder = new MedianFinder();
+        medianFinder.addNum(1);
+        medianFinder.addNum(2);
+        System.out.println(medianFinder.findMedian());
+        medianFinder.addNum(3);
+        System.out.println(medianFinder.findMedian());
+    }
 
 }
