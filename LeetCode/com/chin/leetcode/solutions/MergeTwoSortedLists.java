@@ -24,7 +24,6 @@ public class MergeTwoSortedLists {
         }
         quickSort(l1, curr);
         return l1;
-
     }
 
     private void quickSort(ListNode begin, ListNode end) {

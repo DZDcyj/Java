@@ -2,6 +2,9 @@ package com.chin.leetcode.datastructures;
 
 import org.jetbrains.annotations.Contract;
 
+/**
+ * @author Chin
+ */
 public class MinStack {
     private int min;
     private Node top;
@@ -24,11 +27,13 @@ public class MinStack {
     }
 
     public void push(int x) {
-        if (x < min)
+        if (x < min) {
             min = x;
+        }
         Node node = new Node(x);
-        if (top != null)
+        if (top != null) {
             node.next = top;
+        }
         top = node;
     }
 
@@ -38,13 +43,15 @@ public class MinStack {
             Node node = top;
             int tempmin = Integer.MAX_VALUE;
             while (node != null) {
-                if (node.val < tempmin)
+                if (node.val < tempmin) {
                     tempmin = node.val;
+                }
                 node = node.next;
             }
             min = tempmin;
-        } else
+        } else {
             top = top.next;
+        }
     }
 
     public int top() {

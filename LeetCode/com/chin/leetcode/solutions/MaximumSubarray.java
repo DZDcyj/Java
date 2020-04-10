@@ -33,13 +33,13 @@ public class MaximumSubarray {
             }
             return max;
         } else {
-            int min = nums[0];
+            int max = nums[0];
             for (int num : nums) {
-                if (min > num) {
-                    min = num;
+                if (max < num) {
+                    max = num;
                 }
             }
-            return min;
+            return max;
         }
     }
 

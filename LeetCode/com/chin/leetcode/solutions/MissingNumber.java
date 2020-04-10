@@ -3,6 +3,9 @@ package com.chin.leetcode.solutions;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * @author Chin
+ */
 public class MissingNumber {
     @Contract(pure = true)
     private static int missingNumber(@NotNull int[] nums) {

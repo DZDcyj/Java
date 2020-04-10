@@ -9,7 +9,7 @@ public class CountAndSay {
     private static String countAndSay(int n) {
         String result = "1";
         for (int i = 1; i < n; i++) {
-            result = CountAndSay.getNewString(result);
+            result = getNewString(result);
         }
         return result;
     }
