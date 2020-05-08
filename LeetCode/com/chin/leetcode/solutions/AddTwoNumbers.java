@@ -20,11 +20,12 @@ public class AddTwoNumbers {
                 l2 = l2.next;
             }
             result.next = new ListNode(0);
-            if (result.val >= 10)
+            if (result.val >= 10) {
                 while (result.val >= 10) {
                     result.next.val += 1;
                     result.val -= 10;
                 }
+            }
             if (first) {
                 realResult = result;
                 first = false;
